@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SwapiPeopleDataService} from './swapi-people-data.service'
 
 @Component({
   selector: 'app-root',
@@ -8,12 +7,8 @@ import {SwapiPeopleDataService} from './swapi-people-data.service'
 })
 export class AppComponent {
   title = 'StarWars';
-  constructor(private swapiPeople:SwapiPeopleDataService){
+  constructor(){
     
-    this.swapiPeople.getData().subscribe(data=>{
-      console.log(data);
-
-    })
   }
 }
 
