@@ -1,5 +1,6 @@
 .sidenav-container {
   height: 100%;
+ 
 }
 
 .sidenav {
@@ -14,4 +15,51 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+.hidden{
+  display: none;
+}
+.spacer{
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-single-row{
+  height: 106px;
+}
+
+.mat-toolbar{
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 2px -2px gray;
+}
+
+mat-toolbar a {
+  display: inline-block;
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+
+  &:hover,&:active{
+    border-bottom: 2px solid black;
+  }
+}
+.search-form{
+  display: flex;
+  padding: 8px;
+  border: 1px solid lightgray;
+  
+  input{
+    border: none;
+    opacity: 0.3;
+
+    &:focus-visible{
+      outline: none;
+    }
+  }
+  .mat-icon{
+    transform: rotateY(180deg);
+    opacity: 0.3;
+  }
 }
