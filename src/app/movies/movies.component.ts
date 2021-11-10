@@ -8,12 +8,19 @@ import {SwapiMovieDataService} from '../services/swapi-movie-data.service'
 })
 export class MoviesComponent implements OnInit {
 
+  movieData:any = [];
+
   constructor(private movie:SwapiMovieDataService) { }
+  
+
 
   ngOnInit(): void {
     this.movie.getData().subscribe(data=>{
-      console.log(data);
-  
+      console.log(data);{
+        
+        this.movieData = data;
+        
+      }
     })
   }
 

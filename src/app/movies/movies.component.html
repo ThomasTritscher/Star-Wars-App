@@ -1,1 +1,8 @@
 <p>movies works!</p>
+
+<ul *ngFor="let item of movieData['results']">
+  <li>{{item.title}}</li>
+  <li>{{item.episode_id}}</li>
+  <li>{{item.opening_crawl}}</li>
+</ul>
+
