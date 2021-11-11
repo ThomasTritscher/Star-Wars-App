@@ -1,3 +1,19 @@
 .card-section{
   max-width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 2400px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.card{
+  min-width: 260px;
+  margin: 32px;
+
+  @media only screen and (min-width: 1240px) {
+    width: 400px;
+  }
 }
