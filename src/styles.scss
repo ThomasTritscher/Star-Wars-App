@@ -18,21 +18,18 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 
-  @media only screen and (min-width: 2400px) {
-    flex-wrap: nowrap;
-  }
-
 }
 
 .card {
-  max-width: 400px;
+  width: 400px;
   min-width: 260px;
   margin: 32px;
   border-radius: 0px !important;
   padding: 0 16px 16px 16px !important;
   
-  @media only screen and (min-width: 1240px) {
-    width: 400px;
+  @media only screen and (min-width: 2460px) {
+
+    width: 500px;
 
   }
   
@@ -41,7 +38,9 @@ section {
     margin: 0 0 32px 0;
 
     @media only screen and (min-width: 576px) {
+
       font-size: 32px;
+      
       }
 
   } 

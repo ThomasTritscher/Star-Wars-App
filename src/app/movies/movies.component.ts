@@ -9,7 +9,6 @@ import { SwapiMovieDataService } from '../services/swapi-movie-data.service'
 export class MoviesComponent implements OnInit {
 
   movieData:any = [];
-  detailView:any = ['link1', 'link2', 'link3', 'link4', 'link5', 'link6',];
   movieImages:any = ['../assets/img/star-wars-episode-iv-a-new-hope.jpg', '../assets/img/star-wars-episode-v-the-empire-strikes-back.jpg', '../assets/img/star-wars-episode-vi-return-of-the-jedi.jpg', '../assets/img/star-wars-episode-i-the-phantom-menace.jpg', '../assets/img/star-wars-episode-ii-attack-of-the-clones.jpg', '../assets/img/star-wars-episode-iii-revenge-of-the-sith.jpg'];
 
   constructor(private movie:SwapiMovieDataService) { }
