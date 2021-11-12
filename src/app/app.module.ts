@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { StartComponent } from './start/start.component';
 import { MatCardModule } from '@angular/material/card';
+import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movies.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     PlanetsComponent,
     MainNavComponent,
     StartComponent,
+    DetailViewMoviesComponent,
     
   ],
   imports: [
