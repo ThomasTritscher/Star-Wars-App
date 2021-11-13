@@ -1,8 +1,10 @@
 <section>
+  <span class="spacer100"></span>
   <h1>Filme</h1>
+  <span class="spacer100"></span>
  <div class="card-section">
   
-  <mat-card class="card" *ngFor="let item of movieData['results'], let i = index">
+  <mat-card [id]="i" class="card" *ngFor="let item of movieData, index as i">
     <mat-card-header>
     </mat-card-header>
     <img mat-card-image src="{{movieImages[i]}}" alt="{{item.title}} Wallpaper">
@@ -13,7 +15,7 @@
       <mat-card-subtitle>Erscheinungsdatum: {{item.release_date}} </mat-card-subtitle> 
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button [routerLink]="['/detailViewMovies']">Mehr Informationen</button>
+      <button mat-button [routerLink]="['/detailViewMovies/' + i]">Mehr Informationen</button>
     </mat-card-actions>
   </mat-card>
 </div>

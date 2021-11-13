@@ -1,16 +1,24 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SwapiMovieDataService {
 
-  constructor(private http:HttpClient) {
-   }
+  constructor(public http:HttpClient) {
 
-   getData(){
-     let url="https://swapi.dev/api/films/";
-     return this.http.get(url);
-   }
+  }
+
+   getMovies(){
+     return this.http.get('https://swapi.dev/api/films/');
+
+  }
+
+  getMovieById(id:any){
+    console.log(id);
+    return this.http.get('https://swapi.dev/api/films/'+id);
+ }
+   
+
 }
