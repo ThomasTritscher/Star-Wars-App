@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters.component';
 import { DetailViewCharactersComponent } from './detail-view-characters/detail-view-characters.component';
 import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movies.component';
+import { DetailViewPlanetsComponent } from './detail-view-planets/detail-view-planets.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MoviesComponent } from './movies/movies.component';
 import { PlanetsComponent } from './planets/planets.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'characters', component:CharactersComponent},
   {path: 'detailViewMovies/:id', component:DetailViewMoviesComponent},
   {path: 'detailViewCharacters/:id', component:DetailViewCharactersComponent},
+  {path: 'detailViewPlanets/:id', component:DetailViewPlanetsComponent},
 ];
 
 @NgModule({

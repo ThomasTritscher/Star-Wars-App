@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movies.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { DetailViewCharactersComponent } from './detail-view-characters/detail-view-characters.component';
+import { DetailViewPlanetsComponent } from './detail-view-planets/detail-view-planets.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DetailViewCharactersComponent } from './detail-view-characters/detail-v
     StartComponent,
     DetailViewMoviesComponent,
     DetailViewCharactersComponent,
+    DetailViewPlanetsComponent,
     
   ],
   imports: [

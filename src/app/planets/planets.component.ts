@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwapiDataService } from '../services/swapi-data.service'
 
 
 @Component({
@@ -8,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
-  constructor() { }
+  public planetData:any = [];
+
+  constructor( public data:SwapiDataService ) { }
 
   ngOnInit(): void {
+
+    this.data.getPlanets().subscribe((response:any)=> {
+      this.planetData = response['results'];
+      console.log(this.planetData)
+  
+    })
 
    
   }
