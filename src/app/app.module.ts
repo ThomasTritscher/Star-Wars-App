@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { StartComponent } from './start/start.component';
 import { MatCardModule } from '@angular/material/card';
 import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movies.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movi
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,10 @@
-<section>
+<main>
   <span class="spacer100"></span>
   <h1>Filme</h1>
   <span class="spacer100"></span>
- <div class="card-section">
+ <section>
   
-  <mat-card [id]="i" class="card" *ngFor="let item of movieData, index as i">
+  <mat-card class="card" *ngFor="let item of movieData, index as i">
     <mat-card-header>
     </mat-card-header>
     <img mat-card-image src="{{movieImages[i]}}" alt="{{item.title}} Wallpaper">
@@ -18,9 +18,9 @@
       <button mat-button [routerLink]="['/detailViewMovies/' + i]">Mehr Informationen</button>
     </mat-card-actions>
   </mat-card>
-</div>
-
 </section>
+
+</main>
 
 
 

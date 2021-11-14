@@ -4,20 +4,30 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-section {
+.mat-typography h1{
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  font-weight: 600;
+  line-height: 1.5em;
+}
 
+
+.mat-typography h3{
+  font-size: clamp(1.5rem, 2.0vw, 3.5rem);
+  opacity: 0.7;
+}
+
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card-section{
-
+section {
   max-width: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
 .card {
@@ -34,25 +44,57 @@ section {
   }
   
   mat-card-title {
-
     margin: 0 0 32px 0;
-
     @media only screen and (min-width: 576px) {
-
       font-size: 32px;
-      
       }
-
   } 
 
   mat-card-subtitle {
-
     color: black;
     font-size: 18px;
-
   }
 }
 
 .spacer100{
   height: 100px;
+}
+
+.divider{
+  background: rgb(0 0 0 / 70%);
+  width: 3.75rem;
+  height: 2px;
+  margin: 8px;
+}
+
+
+.description-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0 0 0;
+   
+  @media only screen and (min-width: 992px) {
+    max-width: 30%;
+    margin: 32px 32px 0 0;
+  }
+
+  mat-card-subtitle {
+    color: black;
+    line-height: 1.5em;
+  }
+
+}
+
+.image-wrapper{
+  margin: 32px 0 0 0;
+
+  @media only screen and (min-width: 992px) {
+    margin: 32px 0 0 64px;
+  }
+
+  img{
+    width: 100%;
+    max-height: 80%;
+
+  }
 }

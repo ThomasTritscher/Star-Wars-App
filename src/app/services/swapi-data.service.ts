@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class SwapiMovieDataService {
+export class SwapiDataService {
 
   constructor(public http:HttpClient) {
 
@@ -16,8 +16,8 @@ export class SwapiMovieDataService {
   }
 
   getMovieById(id:any){
-    console.log(id);
     return this.http.get('https://swapi.dev/api/films/'+id);
+
  }
    
 

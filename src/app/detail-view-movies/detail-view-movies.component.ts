@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SwapiMovieDataService } from '../services/swapi-movie-data.service'
+import { SwapiDataService } from '../services/swapi-data.service'
 
 @Component({
   selector: 'app-detail-view-movies',
@@ -10,23 +10,26 @@ import { SwapiMovieDataService } from '../services/swapi-movie-data.service'
 export class DetailViewMoviesComponent implements OnInit {
 
 
-  selectedMovie:any;
+  selectedMovie:any = [];
+  public movieImages:any = ['../assets/img/star-wars-episode-iv-a-new-hope.jpg', '../assets/img/star-wars-episode-v-the-empire-strikes-back.jpg', '../assets/img/star-wars-episode-vi-return-of-the-jedi.jpg', '../assets/img/star-wars-episode-i-the-phantom-menace.jpg', '../assets/img/star-wars-episode-ii-attack-of-the-clones.jpg', '../assets/img/star-wars-episode-iii-revenge-of-the-sith.jpg'];
+  selectedCharacter:any = [];
+ 
 
-  constructor(public route: ActivatedRoute, public movie:SwapiMovieDataService) { }
+
+  constructor(public route: ActivatedRoute, public data:SwapiDataService) { }
 
   ngOnInit(): void {
-
-    this.route.paramMap.subscribe(param => {
-      let movieId = param.get('index');
+    this.route.paramMap.subscribe(param =>{
+      let movieId = param.get('id');
+      console.log(movieId);
 
       if(movieId){
-
-        this.movie.getMovieById(parseInt(movieId) + 1).subscribe(selectedMovie=>{
-          console.log(selectedMovie);
+        this.data.getMovieById(parseInt(movieId) + 1).subscribe((response:any)=>{
+          this.selectedMovie = response;
+          console.log(this.selectedMovie)
         });
-
       }
-    
+      
     });
   }
 }
