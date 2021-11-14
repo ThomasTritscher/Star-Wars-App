@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SwapiDataService } from '../services/swapi-data.service'
 
 @Component({
   selector: 'app-characters',
@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor() { }
+  public charactersData:any = [];
+
+  constructor( public data:SwapiDataService ) { }
 
   ngOnInit(): void {
+
+    this.data.getCharacters().subscribe((response:any)=> {
+      this.charactersData = response['results'];
+      console.log(this.charactersData)
+  
+    })
 
    
   }

@@ -21,22 +21,22 @@
 <span class="spacer100"></span>
 <section class="">
 <div class="info-container">
-  <div>
+  <div class="info-box">
     <mat-card-title>Charaktere:</mat-card-title>
-    <mat-chip-list aria-label="Charactere Selection" *ngFor="let item of selectedCharacter, index as i">
-      <mat-chip>{{item.character}}</mat-chip>
-    </mat-chip-list>
-    
+    <mat-chip-list aria-label="Charactere Selection">
+      <mat-chip>{{selectedMovie.characters}}</mat-chip>
+     
+    </mat-chip-list> 
   </div>
-  <div>
+  <div class="info-box">
     <mat-card-title>Planeten:</mat-card-title>
     
   </div>
-  <div>
+  <div class="info-box">
     <mat-card-title>Raumschiffe:</mat-card-title>
     
   </div>
-  <div>
+  <div class="info-box">
     <mat-card-title>Fahrzeuge:</mat-card-title>
     
   </div>

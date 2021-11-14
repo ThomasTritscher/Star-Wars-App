@@ -1,0 +1,45 @@
+<main>
+  <span class="spacer100"></span>
+  <h3>Characterdetails</h3>
+  <span class="divider"></span>
+  <h1>{{selectedCharacter.name}}</h1>
+  <span class="spacer100"></span>
+
+<section>
+  <div class="description-wrapper">
+    <mat-card-title>Details:</mat-card-title>
+    <mat-card-subtitle><b>Größe:</b> {{selectedCharacter.height}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Gewicht:</b> {{selectedCharacter.mass}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Haarfarbe:</b> {{selectedCharacter.hair_color}}</mat-card-subtitle>
+    <mat-card-subtitle><b>Augenfarbe:</b> {{selectedCharacter.eye_color}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Geburtsjahr:</b> {{selectedCharacter.birth_year}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Geschlecht:</b> {{selectedCharacter.gender}}</mat-card-subtitle>
+    <mat-card-subtitle><b>Heimatplanet:</b> {{selectedCharacter.homeworld}}</mat-card-subtitle>
+    
+  </div>
+  <div class="image-wrapper">
+    <img src="" alt="">
+  </div>
+</section>
+<span class="spacer100"></span>
+<section class="">
+<div class="info-container">
+  <div class="info-box">
+    <mat-card-title>Filme:</mat-card-title>
+    <mat-chip-list aria-label="Charactere Selection">
+      <mat-chip>{{selectedCharacter.characters}}</mat-chip>
+     
+    </mat-chip-list> 
+  </div>
+  <div class="info-box">
+    <mat-card-title>Planeten:</mat-card-title>
+    
+  </div>
+  <div class="info-box">
+    <mat-card-title>Raumschiffe:</mat-card-title>
+    
+  </div>
+</div>
+</section>
+<span class="spacer100"></span>
+</main>

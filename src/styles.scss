@@ -45,6 +45,7 @@ section {
   
   mat-card-title {
     margin: 0 0 32px 0;
+
     @media only screen and (min-width: 576px) {
       font-size: 32px;
       }
@@ -97,4 +98,14 @@ section {
     max-height: 80%;
 
   }
+}
+
+.info-box{
+  margin: 0 0 32px 0;
+
+  mat-card-title {
+    line-height: 1.5em;
+  }
+
+
 }

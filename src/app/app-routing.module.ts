@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters.component';
+import { DetailViewCharactersComponent } from './detail-view-characters/detail-view-characters.component';
 import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movies.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MoviesComponent } from './movies/movies.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'planets', component:PlanetsComponent},
   {path: 'characters', component:CharactersComponent},
   {path: 'detailViewMovies/:id', component:DetailViewMoviesComponent},
+  {path: 'detailViewCharacters/:id', component:DetailViewCharactersComponent},
 ];
 
 @NgModule({
