@@ -12,9 +12,8 @@ export class DetailViewMoviesComponent implements OnInit {
 
   selectedMovie:any = [];
   movieImages:any = ['../assets/img/star-wars-episode-iv-a-new-hope.jpg', '../assets/img/star-wars-episode-v-the-empire-strikes-back.jpg', '../assets/img/star-wars-episode-vi-return-of-the-jedi.jpg', '../assets/img/star-wars-episode-i-the-phantom-menace.jpg', '../assets/img/star-wars-episode-ii-attack-of-the-clones.jpg', '../assets/img/star-wars-episode-iii-revenge-of-the-sith.jpg'];
+  movieImage:any = [];
   
- 
-
 
   constructor(public route: ActivatedRoute, public data:SwapiDataService) { }
 
@@ -28,6 +27,11 @@ export class DetailViewMoviesComponent implements OnInit {
           this.selectedMovie = response;
           console.log(this.selectedMovie)
         });
+      }
+
+      if(movieId){
+        this.movieImage = this.movieImages[movieId];
+        console.log(this.movieImage);
       }
       
     });

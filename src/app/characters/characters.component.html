@@ -7,7 +7,7 @@
   <mat-card class="card" *ngFor="let item of charactersData, index as i">
     <mat-card-header>
     </mat-card-header>
-    <img mat-card-image src="" alt="{{item.name}} Picture">
+    <img mat-card-image src="{{characterImages[i]}}" alt="{{item.name}} Picture">
     <mat-card-content>
       <mat-card-title>{{item.name}}</mat-card-title>
       <mat-card-subtitle>Geburtsjahr: {{item.birth_year}} </mat-card-subtitle>

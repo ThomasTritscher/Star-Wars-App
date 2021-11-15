@@ -15,7 +15,7 @@
     <p [ngStyle]="{'padding' : '32px 0'}">{{selectedMovie.opening_crawl}}</p> 
   </div>
   <div class="image-wrapper">
-    <img src="../assets/img/star-wars-episode-iv-a-new-hope.jpg" alt="">
+    <img src="{{movieImage}}" alt="{{selectedMovie.title}} Wallpaper">
   </div>
 </section>
 <span class="spacer100"></span>
@@ -24,7 +24,7 @@
   <div class="info-box">
     <mat-card-title>Charaktere:</mat-card-title>
     <mat-chip-list aria-label="Charactere Selection">
-      <mat-chip>{{selectedMovie.characters}}</mat-chip>
+      <mat-chip></mat-chip>
      
     </mat-chip-list> 
   </div>
