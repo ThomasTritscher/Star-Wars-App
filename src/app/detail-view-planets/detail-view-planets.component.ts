@@ -10,6 +10,8 @@ import { SwapiDataService } from '../services/swapi-data.service'
 export class DetailViewPlanetsComponent implements OnInit {
 
   selectedPlanet:any = [];
+  public planetImages:any = ['../assets/img/Tatooine.png', '../assets/img/Alderaan.jpg.jpg', '../assets/img/Yavin_IV.jpg', '../assets/img/Hoth.jpg', '../assets/img/Dagobah.png', '../assets/img/Bespin.jpg', '../assets/img/Endor.jpg', '../assets/img/Naboo.png', '../assets/img/Coruscant.jpg', '../assets/img/Kamino.jpg'];
+  planetImage:any = [];
 
   constructor( public route: ActivatedRoute, public data:SwapiDataService ) { }
 
@@ -24,6 +26,10 @@ export class DetailViewPlanetsComponent implements OnInit {
           this.selectedPlanet = response;
           console.log(this.selectedPlanet)
         });
+      }
+      if(planetId){
+        this.planetImage = this.planetImages[planetId];
+        console.log(this.planetImage);
       }
       
     });
