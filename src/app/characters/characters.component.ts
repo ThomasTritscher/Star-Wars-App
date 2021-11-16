@@ -18,7 +18,6 @@ export class CharactersComponent implements OnInit {
     this.data.getCharacters().subscribe((response:any)=> {
       this.charactersData = response['results'];
       console.log(this.charactersData)
-  
     })
 
    

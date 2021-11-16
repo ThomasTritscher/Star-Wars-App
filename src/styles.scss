@@ -101,11 +101,11 @@ section {
 }
 
 .info-box{
-  margin: 0 0 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0 32px 0;
 
   mat-card-title {
     line-height: 1.5em;
   }
-
-
 }
