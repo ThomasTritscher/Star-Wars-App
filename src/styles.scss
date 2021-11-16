@@ -1,111 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin     : 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 
-.mat-typography h1{
-  font-size: clamp(2.5rem, 4.5vw, 5rem);
+.mat-typography h1 {
+  font-size  : clamp(1.5rem, 4.5vw, 5rem);
   font-weight: 600;
   line-height: 1.5em;
 }
 
 
-.mat-typography h3{
-  font-size: clamp(1.5rem, 2.0vw, 3.5rem);
-  opacity: 0.7;
+.mat-typography h3 {
+  font-size: clamp(1rem, 2.0vw, 3.5rem);
+  opacity  : 0.7;
 }
 
 
 main {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  align-items: center;
+  align-items   : center;
 }
 
 section {
-  max-width: 80%;
-  display: flex;
+  max-width      : 80%;
+  display        : flex;
+  flex-wrap      : wrap;
   justify-content: center;
-  flex-wrap: wrap;
+
+  
 }
 
 .card {
-  width: 400px;
-  min-width: 260px;
-  margin: 32px;
+  width        : 400px;
+  min-width    : 260px;
+  margin       : 32px;
   border-radius: 0px !important;
-  padding: 0 16px 16px 16px !important;
-  
+  padding      : 0 16px 16px 16px !important;
+
   @media only screen and (min-width: 2460px) {
-
     width: 500px;
-
   }
-  
+
   mat-card-title {
     margin: 0 0 32px 0;
 
     @media only screen and (min-width: 576px) {
       font-size: 32px;
-      }
-  } 
+    }
+  }
 
   mat-card-subtitle {
-    color: black;
+    color    : black;
     font-size: 18px;
   }
 }
 
-.spacer100{
+.spacer100 {
   height: 100px;
 }
 
-.divider{
+.divider {
   background: rgb(0 0 0 / 70%);
-  width: 3.75rem;
-  height: 2px;
-  margin: 8px;
+  width     : 3.75rem;
+  height    : 2px;
+  margin    : 8px;
 }
 
 
-.description-wrapper{
-  display: flex;
+.description-wrapper {
+  display       : flex;
   flex-direction: column;
-  margin: 32px 0 0 0;
-   
+  margin        : 32px 0 0 0;
+
   @media only screen and (min-width: 992px) {
     max-width: 30%;
-    margin: 32px 32px 0 0;
+    margin   : 32px 32px 0 0;
   }
 
   mat-card-subtitle {
-    color: black;
+    color      : black;
     line-height: 1.5em;
   }
 
 }
 
-.image-wrapper{
+.image-wrapper {
   margin: 32px 0 0 0;
 
   @media only screen and (min-width: 992px) {
     margin: 32px 0 0 64px;
   }
 
-  img{
-    width: 100%;
+  img {
+    width     : 100%;
     max-height: 80%;
 
   }
 }
 
-.info-box{
-  display: flex;
+.info-box {
+  display  : flex;
   flex-wrap: wrap;
-  margin: 16px 0 32px 0;
+  margin   : 16px 0 32px 0;
 
   mat-card-title {
     line-height: 1.5em;
+  }
+
+  .mat-standard-chip {
+    font-weight: 600;
+    margin       : 8px !important;
+    border-radius: 0px;
   }
 }

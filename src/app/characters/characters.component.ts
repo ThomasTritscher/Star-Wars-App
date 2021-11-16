@@ -15,7 +15,7 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.data.getCharacters().subscribe((response:any)=> {
+    this.data.getAllCharacters().subscribe((response:any)=> {
       this.charactersData = response['results'];
       console.log(this.charactersData)
     })

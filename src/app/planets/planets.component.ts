@@ -16,7 +16,7 @@ export class PlanetsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.data.getPlanets().subscribe((response:any)=> {
+    this.data.getAllPlanets().subscribe((response:any)=> {
       this.planetData = response['results'];
       console.log(this.planetData)
   

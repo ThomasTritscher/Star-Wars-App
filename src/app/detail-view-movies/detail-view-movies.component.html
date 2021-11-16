@@ -41,7 +41,7 @@
       <div class="info-box">
         <mat-chip-list
           aria-label="Planet Selection"
-          *ngFor="let item of selectedMovie['planets']; index as i"
+          *ngFor="let item of planetsData; index as i"
         >
           <mat-chip>{{ item }}</mat-chip>
         </mat-chip-list>
@@ -50,8 +50,8 @@
       <div class="info-box">
         <mat-chip-list
           aria-label="Starship Selection"
-          *ngFor="let item of selectedMovie['starships']; index as i"
-        >
+          *ngFor="let item of starshipsData; index as i"
+          >
           <mat-chip>{{ item }}</mat-chip>
         </mat-chip-list>
       </div>
@@ -59,7 +59,7 @@
       <div class="info-box">
         <mat-chip-list
           aria-label="Vehicle Selection"
-          *ngFor="let item of selectedMovie['vehicles']; index as i"
+          *ngFor="let item of vehiclesData; index as i"
         >
           <mat-chip>{{ item }}</mat-chip>
         </mat-chip-list>

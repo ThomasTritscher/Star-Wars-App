@@ -7,21 +7,34 @@ import { HttpClient } from '@angular/common/http';
 export class SwapiDataService {
   constructor(public http: HttpClient) {}
 
-  getMovies() {
+  getAllMovies() {
     return this.http.get('https://swapi.dev/api/films/');
   }
+
   getMovieById(id: any) {
     return this.http.get('https://swapi.dev/api/films/' + id);
   }
-  getCharacters() {
+  getAllCharacters() {
     return this.http.get('https://swapi.dev/api/people/');
   }
+ 
+  async getCharacters(movie:any) {
+    let chars = [];
+    for(let i = 0; i < movie.characters.length; i++){
+      const char = await this.http.get(movie.characters[i]).toPromise();
+      chars.push(char);
+    }
+    return chars;
+  }
+
   getCharacterById(id: any) {
     return this.http.get('https://swapi.dev/api/people/' + id);
   }
-  getPlanets() {
+  getAllPlanets() {
     return this.http.get('https://swapi.dev/api/planets/');
+    
   }
+  
   getPlanetById(id: any) {
     return this.http.get('https://swapi.dev/api/planets/' + id);
   }
