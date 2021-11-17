@@ -9,8 +9,8 @@ import { SwapiDataService } from '../services/swapi-data.service'
 })
 export class PlanetsComponent implements OnInit {
 
-  public planetData:any = [];
-  public planetImages:any = ['../assets/img/Tatooine.png', '../assets/img/Alderaan.jpg.jpg', '../assets/img/Yavin_IV.jpg', '../assets/img/Hoth.jpg', '../assets/img/Dagobah.png', '../assets/img/Bespin.jpg', '../assets/img/Endor.jpg', '../assets/img/Naboo.png', '../assets/img/Coruscant.jpg', '../assets/img/Kamino.jpg'];
+  planetData:any = [];
+  planetImages:any = ['../assets/img/Tatooine.png', '../assets/img/Alderaan.jpg.jpg', '../assets/img/Yavin_IV.jpg', '../assets/img/Hoth.jpg', '../assets/img/Dagobah.png', '../assets/img/Bespin.jpg', '../assets/img/Endor.jpg', '../assets/img/Naboo.png', '../assets/img/Coruscant.jpg', '../assets/img/Kamino.jpg'];
 
   constructor( public data:SwapiDataService ) { }
 

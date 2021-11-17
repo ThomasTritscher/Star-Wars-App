@@ -32,7 +32,10 @@ export class DetailViewMoviesComponent implements OnInit {
         this.data.getMovieById(parseInt(movieId) + 1).subscribe(async (response:any)=>{
           this.selectedMovie = response;
           this.charactersData = await this.data.getCharacters(this.selectedMovie);
-          console.log(this.selectedMovie, this.charactersData);
+          this.planetsData = await this.data.getPlanets(this.selectedMovie);
+          this.starshipsData = await this.data.getStarships(this.selectedMovie);
+          this.vehiclesData = await this.data.getVehicles(this.selectedMovie);
+          console.log(this.selectedMovie, this.charactersData, this.planetsData);
         });
 
       }

@@ -43,7 +43,7 @@
           aria-label="Planet Selection"
           *ngFor="let item of planetsData; index as i"
         >
-          <mat-chip>{{ item }}</mat-chip>
+          <mat-chip>{{ item.name }}</mat-chip>
         </mat-chip-list>
       </div>
       <mat-card-title>Raumschiffe:</mat-card-title>
@@ -52,7 +52,7 @@
           aria-label="Starship Selection"
           *ngFor="let item of starshipsData; index as i"
           >
-          <mat-chip>{{ item }}</mat-chip>
+          <mat-chip>{{ item.name }}</mat-chip>
         </mat-chip-list>
       </div>
       <mat-card-title>Fahrzeuge:</mat-card-title>
@@ -61,7 +61,7 @@
           aria-label="Vehicle Selection"
           *ngFor="let item of vehiclesData; index as i"
         >
-          <mat-chip>{{ item }}</mat-chip>
+          <mat-chip>{{ item.name }}</mat-chip>
         </mat-chip-list>
       </div>
     </div>

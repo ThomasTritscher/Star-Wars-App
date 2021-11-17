@@ -24,24 +24,23 @@
 <span class="spacer100"></span>
 <section class="">
 <div class="info-container">
+  <mat-card-title>Filme:</mat-card-title>
   <div class="info-box">
-    <mat-card-title>Filme:</mat-card-title>
-    <mat-chip-list aria-label="Charactere Selection">
-      <mat-chip>{{ selectedPlanet.characters}}</mat-chip>
+    <mat-chip-list aria-label="Movie Selection"           
+    *ngFor="let item of moviesData; index as i"
+    >
+      <mat-chip>{{item.title}}</mat-chip>
      
     </mat-chip-list> 
   </div>
+  <mat-card-title>Residents:</mat-card-title>
   <div class="info-box">
-    <mat-card-title>Planeten:</mat-card-title>
-    
-  </div>
-  <div class="info-box">
-    <mat-card-title>Raumschiffe:</mat-card-title>
-    
-  </div>
-  <div class="info-box">
-    <mat-card-title>Fahrzeuge:</mat-card-title>
-    
+    <mat-chip-list
+          aria-label="Residents Selection"
+          *ngFor="let item of residentsData; index as i"
+          >
+          <mat-chip>{{ item.name }}</mat-chip>
+        </mat-chip-list>
   </div>
 </div>
 </section>
