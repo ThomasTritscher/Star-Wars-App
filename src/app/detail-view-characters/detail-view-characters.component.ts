@@ -31,6 +31,7 @@ export class DetailViewCharactersComponent implements OnInit {
           this.moviesData = await this.data.getMovies(this.selectedCharacter);
           this.vehiclesData = await this.data.getVehicles(this.selectedCharacter);
           this.starshipsData = await this.data.getStarships(this.selectedCharacter);
+          console.log(this.selectedCharacter)
         });
       }
       if(characterId){

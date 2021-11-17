@@ -1,6 +1,6 @@
 <main>
   <span class="spacer100"></span>
-  <h3>Planetendetails</h3>
+  <h3>Planetdetails</h3>
   <span class="divider"></span>
   <h1>{{ selectedPlanet.name}}</h1>
   <span class="spacer100"></span>
@@ -8,13 +8,12 @@
 <section>
   <div class="description-wrapper">
     <mat-card-title>Details:</mat-card-title>
-    <mat-card-subtitle><b>Type:</b> {{ selectedPlanet.terrain}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Klima:</b> {{ selectedPlanet.climate}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Genre:</b> Sciennce Fiction </mat-card-subtitle>
-    <mat-card-subtitle><b>Bevölkerung:</b> {{ selectedPlanet.population}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Gravitation:</b> {{ selectedPlanet.gravity}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Umlaufzeit:</b> {{ selectedPlanet.orbital_period}}</mat-card-subtitle>
-    <mat-card-subtitle><b>Durchmesser:</b> {{ selectedPlanet.diameter}}</mat-card-subtitle>
+    <mat-card-subtitle><b>Terrain:</b> {{ selectedPlanet.terrain}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Climate:</b> {{ selectedPlanet.climate}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Population:</b> {{ selectedPlanet.population}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Gravity:</b> {{ selectedPlanet.gravity}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Orbital Period:</b> {{ selectedPlanet.orbital_period}}</mat-card-subtitle>
+    <mat-card-subtitle><b>Diameter:</b> {{ selectedPlanet.diameter}}</mat-card-subtitle>
     
   </div>
   <div class="image-wrapper">
@@ -24,7 +23,7 @@
 <span class="spacer100"></span>
 <section class="">
 <div class="info-container">
-  <mat-card-title>Filme:</mat-card-title>
+  <mat-card-title>Films:</mat-card-title>
   <div class="info-box">
     <mat-chip-list aria-label="Movie Selection"           
     *ngFor="let item of moviesData; index as i"
@@ -36,7 +35,7 @@
   <mat-card-title>Residents:</mat-card-title>
   <div class="info-box">
     <mat-chip-list
-          aria-label="Residents Selection"
+          aria-label="Resident Selection"
           *ngFor="let item of residentsData; index as i"
           >
           <mat-chip>{{ item.name }}</mat-chip>

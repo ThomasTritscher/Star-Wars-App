@@ -13,10 +13,10 @@
         ><b>Director:</b> {{ selectedMovie.director }}
       </mat-card-subtitle>
       <mat-card-subtitle
-        ><b>Produzenten:</b> {{ selectedMovie.producer }}
+        ><b>Producer:</b> {{ selectedMovie.producer }}
       </mat-card-subtitle>
       <mat-card-subtitle
-        ><b>Erscheinungsdatum:</b>
+        ><b>Release Date:</b>
         {{ selectedMovie.release_date }}</mat-card-subtitle
       >
       <p [ngStyle]="{ padding: '32px 0' }">{{ selectedMovie.opening_crawl }}</p>
@@ -28,40 +28,42 @@
   <span class="spacer100"></span>
   <section>
     <div class="info-container">
-      <mat-card-title>Charaktere:</mat-card-title>
+      <mat-card-title>Characters:</mat-card-title>
       <div class="info-box">
         <mat-chip-list
           aria-label="Character Selection"
           *ngFor="let item of charactersData; index as i"
         >
-          <mat-chip>{{ item.name }}</mat-chip>
+          <mat-chip routerLink="/characters/">{{ item.name }}</mat-chip>
+
         </mat-chip-list>
       </div>
-      <mat-card-title>Planeten:</mat-card-title>
+      <mat-card-title>Planets:</mat-card-title>
       <div class="info-box">
         <mat-chip-list
           aria-label="Planet Selection"
           *ngFor="let item of planetsData; index as i"
         >
-          <mat-chip>{{ item.name }}</mat-chip>
+          <mat-chip routerLink="/planets/">{{ item.name }}</mat-chip>
+
         </mat-chip-list>
       </div>
-      <mat-card-title>Raumschiffe:</mat-card-title>
+      <mat-card-title>Starships:</mat-card-title>
       <div class="info-box">
         <mat-chip-list
           aria-label="Starship Selection"
           *ngFor="let item of starshipsData; index as i"
           >
-          <mat-chip>{{ item.name }}</mat-chip>
+          <mat-chip routerLink="/movies/">{{ item.name }}</mat-chip>
         </mat-chip-list>
       </div>
-      <mat-card-title>Fahrzeuge:</mat-card-title>
+      <mat-card-title>Vehicles:</mat-card-title>
       <div class="info-box">
         <mat-chip-list
           aria-label="Vehicle Selection"
           *ngFor="let item of vehiclesData; index as i"
         >
-          <mat-chip>{{ item.name }}</mat-chip>
+          <mat-chip routerLink="/movies/">{{ item.name }}</mat-chip>
         </mat-chip-list>
       </div>
     </div>
