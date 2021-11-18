@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SwapiDataService } from '../services/swapi-data.service'
+import { SwapiDataService } from '../services/swapi-data.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AddMovieComponent } from '../add-movie/add-movie.component';
+
+
 
 @Component({
   selector: 'app-detail-view-movies',
@@ -19,7 +23,7 @@ export class DetailViewMoviesComponent implements OnInit {
   movieImage:any = [];
   
 
-  constructor(public route: ActivatedRoute, public data:SwapiDataService) { }
+  constructor(public route: ActivatedRoute, public data:SwapiDataService,public dialog: MatDialog) { }
 
   ngOnInit(){
     this.route.paramMap.subscribe(param =>{
@@ -47,4 +51,13 @@ export class DetailViewMoviesComponent implements OnInit {
 
     });
   }
+
+  openAddMovieDialog(): void {
+    const dialogRef = this.dialog.open(AddMovieComponent);
+  }
+  openAddPlanetDialog(): void {
+    const dialogRef = this.dialog.open(AddMovieComponent);
+  }
+ 
+  
 }

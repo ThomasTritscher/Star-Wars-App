@@ -22,6 +22,13 @@ import { DetailViewMoviesComponent } from './detail-view-movies/detail-view-movi
 import { MatChipsModule } from '@angular/material/chips';
 import { DetailViewCharactersComponent } from './detail-view-characters/detail-view-characters.component';
 import { DetailViewPlanetsComponent } from './detail-view-planets/detail-view-planets.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
 
 @NgModule({
   declarations: [
@@ -34,6 +41,7 @@ import { DetailViewPlanetsComponent } from './detail-view-planets/detail-view-pl
     DetailViewMoviesComponent,
     DetailViewCharactersComponent,
     DetailViewPlanetsComponent,
+    AddMovieComponent,
     
   ],
   imports: [
@@ -49,9 +57,21 @@ import { DetailViewPlanetsComponent } from './detail-view-planets/detail-view-pl
     MatListModule,
     MatFormFieldModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule
+
   ],
-  providers: [],
+
+  providers: [
+    {
+      provide: MatDialogRef,
+      useValue: {}
+    },
+ ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

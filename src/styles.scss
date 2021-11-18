@@ -35,8 +35,6 @@ section {
   display        : flex;
   flex-wrap      : wrap;
   justify-content: center;
-
-  
 }
 
 .card {
@@ -65,7 +63,11 @@ section {
 }
 
 .spacer100 {
-  height: 100px;
+  height: 32px;
+
+  @media only screen and (min-width: 992px) {
+    height: 100px;
+  }
 }
 
 .divider {
@@ -79,7 +81,7 @@ section {
 .description-wrapper {
   display       : flex;
   flex-direction: column;
-  margin        : 32px 0 0 0;
+  margin        : 32px 16px 0 0;
 
   @media only screen and (min-width: 992px) {
     max-width: 30%;
@@ -94,7 +96,7 @@ section {
 }
 
 .image-wrapper {
-  margin: 32px 0 0 0;
+  margin: 32px 0 0 16px;
 
   @media only screen and (min-width: 992px) {
     margin: 32px 0 0 64px;
@@ -107,6 +109,10 @@ section {
   }
 }
 
+.info-container {
+  max-width: 63.5rem;
+}
+
 .info-box {
   display  : flex;
   flex-wrap: wrap;
@@ -117,8 +123,39 @@ section {
   }
 
   .mat-standard-chip {
-    font-weight: 600;
+    font-weight  : 600;
     margin       : 8px !important;
     border-radius: 0px;
   }
 }
+
+.dialog-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width     : 100vw;
+  height    : 100vh;
+  position  : absolute;
+  top       : 0;
+  right     : 0;
+  left      : 0;
+  z-index   : 10;
+}
+
+.example-card {
+  max-width: 400px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
