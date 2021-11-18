@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AddPlanetComponent } from './add-planet/add-planet.component';
+import { AddCharacterComponent } from './add-character/add-character.component';
 
 
 
@@ -44,6 +45,7 @@ import { AddPlanetComponent } from './add-planet/add-planet.component';
     DetailViewPlanetsComponent,
     AddMovieComponent,
     AddPlanetComponent,
+    AddCharacterComponent,
     
   ],
   imports: [

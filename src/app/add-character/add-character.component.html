@@ -1,0 +1,31 @@
+<div class="dialog-overlay">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Add Film</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label></mat-label>
+          <input matInput value="Add Title">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label></mat-label>
+          <input matInput value="Add Director">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Producer</mat-label>
+          <mat-select>
+            <mat-option>George Lucas</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button mat-dialog-close onclick="closeDialog()">Close</button>
+    </mat-card-actions>
+  </mat-card>
+
+  
+</div>
