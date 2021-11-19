@@ -25,7 +25,7 @@
           </mat-select>
         </mat-form-field>
         <mat-label>Release Date</mat-label>
-        <mat-form-field class="example-half-width" appearance="fill" >
+        <mat-form-field class="example-half-width" appearance="fill" [ngStyle]="{'display': 'flow-root'}">
           <input matInput [matDatepicker]="myDatePicker" placeholder="yyyy">
           <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
           <mat-datepicker #myDatePicker></mat-datepicker>

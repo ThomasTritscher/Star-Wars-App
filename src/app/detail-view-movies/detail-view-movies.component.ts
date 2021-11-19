@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { SwapiDataService } from '../services/swapi-data.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { AddMovieComponent } from '../add-movie/add-movie.component';
+import { AddCharacterComponent } from '../add-character/add-character.component';
+import { AddPlanetComponent } from '../add-planet/add-planet.component';
 
 
 
@@ -52,11 +54,11 @@ export class DetailViewMoviesComponent implements OnInit {
     });
   }
 
-  openAddMovieDialog(): void {
-    const dialogRef = this.dialog.open(AddMovieComponent);
+  openAddCharacterDialog(): void {
+    const dialogRef = this.dialog.open(AddCharacterComponent);
   }
   openAddPlanetDialog(): void {
-    const dialogRef = this.dialog.open(AddMovieComponent);
+    const dialogRef = this.dialog.open(AddPlanetComponent);
   }
  
   
