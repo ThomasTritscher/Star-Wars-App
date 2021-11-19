@@ -1,29 +1,44 @@
 <div class="dialog-overlay">
-  <mat-card class="example-card">
+  <mat-card class="dialog-card">
     <mat-card-header>
       <mat-card-title>Add Film</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form class="example-form">
+      <form class="dialog-form">
+        <mat-label>Title</mat-label>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label></mat-label>
           <input matInput value="Add Title">
         </mat-form-field>
+        <mat-label>Director</mat-label>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label></mat-label>
           <input matInput value="Add Director">
         </mat-form-field>
+        <mat-label>Producer</mat-label>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Producer</mat-label>
-          <mat-select>
-            <mat-option>George Lucas</mat-option>
+          <mat-select placeholder="Producer">
+            <mat-option value="George Lucas" >George Lucas</mat-option>
+            <mat-option value="Gary Kurtz" >Gary Kurtz</mat-option>
+            <mat-option value="Rick McCallum" >Rick McCallum</mat-option>
+            <mat-option value="Howard G. Kazanjian" >Howard G. Kazanjian</mat-option>
           </mat-select>
         </mat-form-field>
-
+        <mat-label>Release Date</mat-label>
+        <mat-form-field class="example-half-width" appearance="fill" >
+          <input matInput [matDatepicker]="myDatePicker" placeholder="yyyy">
+          <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #myDatePicker></mat-datepicker>
+        </mat-form-field>
+        <mat-label>Description</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <textarea matInput placeholder="Description"></textarea>
+        </mat-form-field>
       </form>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button mat-dialog-close onclick="closeDialog()">Close</button>
+    <mat-card-actions class="dialog-actions-wrapper">
+      <button mat-button mat-dialog-close class="button-bg" onclick="closeDialog()">Close</button>
+      <button mat-button>Add Film</button>
     </mat-card-actions>
   </mat-card>
 

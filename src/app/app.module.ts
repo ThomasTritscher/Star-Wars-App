@@ -27,6 +27,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { AddPlanetComponent } from './add-planet/add-planet.component';
 import { AddCharacterComponent } from './add-character/add-character.component';
 
@@ -65,7 +66,8 @@ import { AddCharacterComponent } from './add-character/add-character.component';
     MatDialogModule,
     MatInputModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
 

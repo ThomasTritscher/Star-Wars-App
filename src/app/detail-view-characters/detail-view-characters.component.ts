@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SwapiDataService } from '../services/swapi-data.service'
+import { SwapiDataService } from '../services/swapi-data.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AddMovieComponent } from '../add-movie/add-movie.component';
 
 @Component({
   selector: 'app-detail-view-characters',
@@ -9,7 +11,7 @@ import { SwapiDataService } from '../services/swapi-data.service'
 })
 export class DetailViewCharactersComponent implements OnInit {
 
-  constructor( public route: ActivatedRoute, public data:SwapiDataService ) { }
+  constructor( public route: ActivatedRoute, public data:SwapiDataService,public dialog: MatDialog) { }
 
   selectedCharacter:any = [];
   moviesData:any = [];
@@ -40,6 +42,10 @@ export class DetailViewCharactersComponent implements OnInit {
       }
       
     });
+  }
+
+  openAddMovieDialog(): void {
+    const dialogRef = this.dialog.open(AddMovieComponent);
   }
 
 }

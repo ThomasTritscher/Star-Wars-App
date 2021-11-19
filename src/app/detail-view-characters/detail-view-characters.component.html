@@ -31,6 +31,7 @@
       <mat-chip routerLink="/movies/">{{item.title}}</mat-chip>
      
     </mat-chip-list> 
+    <mat-chip (click)="openAddMovieDialog()">...</mat-chip>
   </div>
   <mat-card-title>Vehicles:</mat-card-title>
   <div class="info-box">
@@ -40,7 +41,7 @@
       <mat-chip routerLink="/movies/">{{item.name}}</mat-chip>
      
     </mat-chip-list> 
-    
+    <mat-chip>...</mat-chip>
   </div>
   <mat-card-title>Starships:</mat-card-title>
   <div class="info-box">
@@ -50,7 +51,7 @@
       <mat-chip routerLink="/movies/">{{item.name}}</mat-chip>
      
     </mat-chip-list> 
-
+    <mat-chip>...</mat-chip>
   </div>
 </div>
 </section>
