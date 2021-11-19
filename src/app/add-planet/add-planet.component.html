@@ -1,30 +1,50 @@
 <div class="dialog-overlay">
-  <mat-card class="example-card">
+  <mat-card class="dialog-card">
     <mat-card-header>
-      <mat-card-title>Add Film</mat-card-title>
+      <mat-card-title>Add Planet</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form class="example-form">
+      <form class="dialog-form">
+        <mat-label>Name</mat-label>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label></mat-label>
-          <input matInput value="Add Title">
+          <input matInput value="Add Name">
         </mat-form-field>
+        <mat-label>Type</mat-label>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label></mat-label>
-          <input matInput value="Add Director">
-        </mat-form-field>
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Producer</mat-label>
-          <mat-select>
-            <mat-option>George Lucas</mat-option>
+          <mat-select placeholder="Type">
+            <mat-option value="Desert Planet" >Desert Planet</mat-option>
+            <mat-option value="Grasslands, Mountains" >Grasslands, Mountains</mat-option>
+            <mat-option value="Jungle, Rainforests" >Jungle, Rainforests</mat-option>
+            <mat-option value="Tundra, Ice caves, Mountain ranges" >Tundra, Ice caves, Mountain ranges</mat-option>
+            <mat-option value="Gas Giant" >Gas Giant</mat-option>
+            <mat-option value="Forests, Mountains, Lakes" >Forests, Mountains, Lakes</mat-option>
+            <mat-option value="Grassy hills, Swamps, Forests, Mountains" >Grassy hills, Swamps, Forests, Mountains</mat-option>
+            <mat-option value="Cityscape, Mountains" >Cityscape, Mountains</mat-option>
+            <mat-option value="Ocean" >Ocean</mat-option> 
           </mat-select>
         </mat-form-field>
-
+        <mat-label>Created by</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-select placeholder="Created by">
+            <mat-option value="George Lucas" >George Lucas</mat-option>
+            <mat-option value="Gary Kurtz" >Gary Kurtz</mat-option>
+            <mat-option value="Rick McCallum" >Rick McCallum</mat-option>
+            <mat-option value="Howard G. Kazanjian" >Howard G. Kazanjian</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-label>Genre</mat-label>
+        <mat-form-field class="example-half-width" appearance="fill" [ngStyle]="{'display': 'flow-root'}">
+          <input matInput value="Science fiction">
+        </mat-form-field>
+        <mat-label>Race(s)</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <textarea matInput placeholder="separate name with semicolon"></textarea>
+        </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-actions class="dialog-actions-wrapper">
-      <button mat-button mat-dialog-close class="button-bg" onclick="closeDialog()">Abort</button>
-      <button mat-button>Add Film</button>
+      <button mat-button mat-dialog-close class="button-bg" onclick="closeDialog()">Close</button>
+      <button mat-button>Add Planet</button>
     </mat-card-actions>
   </mat-card>
 
