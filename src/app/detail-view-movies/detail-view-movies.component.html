@@ -6,7 +6,8 @@
   <h3>Episode {{ selectedMovie.episode_id }}</h3>
   <span class="spacer100"></span>
 
-  <section>
+  <section class="overview">
+    <div class="container d-flex992">
     <div class="description-wrapper">
       <mat-card-title>Details:</mat-card-title>
       <mat-card-subtitle
@@ -24,10 +25,9 @@
     <div class="image-wrapper">
       <img src="{{ movieImage }}" alt="{{ selectedMovie.title }} Wallpaper" />
     </div>
-  </section>
+  </div>
   <span class="spacer100"></span>
-  <section>
-    <div class="info-container">
+    <div class="container">
       <mat-card-title>Characters:</mat-card-title>
       <div class="info-box">
         <mat-chip-list
@@ -71,6 +71,7 @@
         <mat-chip >...</mat-chip>
       </div>
     </div>
+  
   </section>
   <span class="spacer100"></span>
 </main>

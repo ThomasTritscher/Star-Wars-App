@@ -1,0 +1,50 @@
+.description-wrapper {
+  display       : flex;
+  flex-direction: column;
+  
+  @media only screen and (min-width: 992px) {
+    max-width: 40%;
+    margin   : 32px 32px 0 0;
+  }
+  mat-card-title {
+    line-height: 1.5em;
+  }
+
+  mat-card-subtitle {
+    color      : black;
+    margin-bottom: 0px;
+  }
+
+}
+
+.image-wrapper {
+  width : 100%;
+
+  @media only screen and (min-width: 992px) {
+    margin: 32px 0 0 64px;
+  }
+
+  img {
+    width     : 100%;
+    max-height: 70%;
+
+  }
+}
+
+.info-box {
+  display    : flex;
+  flex-wrap  : wrap;
+  margin     : 0 0 32px 0;
+  align-items: center;
+
+  mat-card-title {
+    line-height: 1.5em;
+  }
+
+  .mat-standard-chip {
+    font-weight  : 600;
+    margin       : 8px !important;
+    border-radius: 0px;
+    background-color: #efefef;
+  }
+}

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SwapiDataService } from '../services/swapi-data.service'
+import { SwapiDataService } from '../services/swapi-data.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AddCharacterComponent } from '../add-character/add-character.component';
+import { AddMovieComponent } from '../add-movie/add-movie.component';
 
 @Component({
   selector: 'app-detail-view-planets',
@@ -16,7 +19,7 @@ export class DetailViewPlanetsComponent implements OnInit {
   planetImages:any = ['../assets/img/Tatooine.png', '../assets/img/Alderaan.jpg.jpg', '../assets/img/Yavin_IV.jpg', '../assets/img/Hoth.jpg', '../assets/img/Dagobah.png', '../assets/img/Bespin.jpg', '../assets/img/Endor.jpg', '../assets/img/Naboo.png', '../assets/img/Coruscant.jpg', '../assets/img/Kamino.jpg'];
   planetImage:any = [];
 
-  constructor( public route: ActivatedRoute, public data:SwapiDataService ) { }
+  constructor( public route: ActivatedRoute, public data:SwapiDataService, public dialog: MatDialog ) { }
 
   ngOnInit(){
 
@@ -37,6 +40,12 @@ export class DetailViewPlanetsComponent implements OnInit {
       }
       
     });
+  }
+  openAddCharacterDialog(){
+    const dialogRef = this.dialog.open(AddCharacterComponent);
+  }
+  openAddMovieDialog(){
+    const dialogRef = this.dialog.open(AddMovieComponent);
   }
 
 }

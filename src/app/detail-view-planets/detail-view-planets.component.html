@@ -2,47 +2,62 @@
   <span class="spacer100"></span>
   <h3>Planetdetails</h3>
   <span class="divider"></span>
-  <h1>{{ selectedPlanet.name}}</h1>
+  <h1>{{ selectedPlanet.name }}</h1>
   <span class="spacer100"></span>
-
-<section>
-  <div class="description-wrapper">
-    <mat-card-title>Details:</mat-card-title>
-    <mat-card-subtitle><b>Terrain:</b> {{ selectedPlanet.terrain}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Climate:</b> {{ selectedPlanet.climate}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Population:</b> {{ selectedPlanet.population}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Gravity:</b> {{ selectedPlanet.gravity}} </mat-card-subtitle>
-    <mat-card-subtitle><b>Orbital Period:</b> {{ selectedPlanet.orbital_period}}</mat-card-subtitle>
-    <mat-card-subtitle><b>Diameter:</b> {{ selectedPlanet.diameter}}</mat-card-subtitle>
-    
-  </div>
-  <div class="image-wrapper">
-    <img src="{{ planetImage }}" alt="">
-  </div>
-</section>
-<span class="spacer100"></span>
-<section>
-<div class="info-container">
-  <mat-card-title>Films:</mat-card-title>
-  <div class="info-box">
-    <mat-chip-list aria-label="Movie Selection"           
-    *ngFor="let item of moviesData; index as i"
-    >
-      <mat-chip>{{item.title}}</mat-chip>
-     
-    </mat-chip-list> 
-  </div>
-  <mat-card-title>Residents:</mat-card-title>
-  <div class="info-box">
-    <mat-chip-list
+  <div class="detail-view-container">
+  <section>
+    <div class="d-flex">
+      <div class="description-wrapper">
+        <mat-card-title>Details:</mat-card-title>
+        <mat-card-subtitle
+          ><b>Terrain:</b> {{ selectedPlanet.terrain }}
+        </mat-card-subtitle>
+        <mat-card-subtitle
+          ><b>Climate:</b> {{ selectedPlanet.climate }}
+        </mat-card-subtitle>
+        <mat-card-subtitle
+          ><b>Population:</b> {{ selectedPlanet.population }}
+        </mat-card-subtitle>
+        <mat-card-subtitle
+          ><b>Gravity:</b> {{ selectedPlanet.gravity }}
+        </mat-card-subtitle>
+        <mat-card-subtitle
+          ><b>Orbital Period:</b>
+          {{ selectedPlanet.orbital_period }}</mat-card-subtitle
+        >
+        <mat-card-subtitle
+          ><b>Diameter:</b> {{ selectedPlanet.diameter }}</mat-card-subtitle
+        >
+      </div>
+      <div class="image-wrapper">
+        <img src="{{ planetImage }}" alt="" />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <mat-card-title>Films:</mat-card-title>
+      <div class="info-box">
+        <mat-chip-list
+          aria-label="Movie Selection"
+          *ngFor="let item of moviesData; index as i"
+        >
+          <mat-chip>{{ item.title }}</mat-chip>
+        </mat-chip-list>
+        <mat-chip (click)="openAddMovieDialog()">...</mat-chip>
+      </div>
+      <mat-card-title>Residents:</mat-card-title>
+      <div class="info-box">
+        <mat-chip-list
           aria-label="Resident Selection"
           *ngFor="let item of residentsData; index as i"
-          >
+        >
           <mat-chip>{{ item.name }}</mat-chip>
         </mat-chip-list>
-  </div>
+        <mat-chip (click)="openAddCharacterDialog()">...</mat-chip>
+      </div>
+    </div>
+  </section>
 </div>
-</section>
 <span class="spacer100"></span>
 </main>
-

@@ -1,0 +1,11 @@
+.mat-typography h1 {
+  font-size  : clamp(1.5rem, 4.5vw, 5rem);
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+
+.mat-typography h3 {
+  font-size: clamp(1rem, 2.0vw, 3.5rem);
+  opacity  : 0.7;
+}

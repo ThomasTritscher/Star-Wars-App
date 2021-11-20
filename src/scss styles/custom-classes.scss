@@ -1,0 +1,24 @@
+.d-flex {
+  display: flex;
+}
+
+.d-flex992 {
+  @media only screen and (min-width: 992px) {
+    display: flex;
+  }
+}
+
+.spacer100 {
+  height: 32px;
+
+  @media only screen and (min-width: 992px) {
+    height: 100px;
+  }
+}
+
+.divider {
+  background: rgb(0 0 0 / 70%);
+  width     : 3.75rem;
+  height    : 2px;
+  margin    : 8px;
+}
