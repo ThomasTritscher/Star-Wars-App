@@ -30,6 +30,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AddPlanetComponent } from './add-planet/add-planet.component';
 import { AddCharacterComponent } from './add-character/add-character.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -47,6 +48,7 @@ import { AddCharacterComponent } from './add-character/add-character.component';
     AddMovieComponent,
     AddPlanetComponent,
     AddCharacterComponent,
+    FooterComponent,
     
   ],
   imports: [
