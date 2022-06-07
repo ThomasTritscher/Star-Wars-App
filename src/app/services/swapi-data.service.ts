@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Movies } from '../Interfaces/Movies';
+
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class SwapiDataService {
   constructor(public http: HttpClient) {}
 
-  getAllMovies() {
+  getAllMovies(){
     return this.http.get('https://swapi.dev/api/films/');
   }
 

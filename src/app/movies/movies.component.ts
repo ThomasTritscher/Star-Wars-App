@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SwapiDataService } from '../services/swapi-data.service'
+import { SwapiDataService } from '../services/swapi-data.service';
+import { Movies } from '../Interfaces/Movies';
 
 @Component({
   selector: 'app-movies',
@@ -8,7 +9,7 @@ import { SwapiDataService } from '../services/swapi-data.service'
 })
 export class MoviesComponent implements OnInit {
 
-  public movieData:any = [];
+  public movieData: Movies[] = [];
   public movieImages:any = ['assets/img/star-wars-episode-iv-a-new-hope.jpg', 'assets/img/star-wars-episode-v-the-empire-strikes-back.jpg', 'assets/img/star-wars-episode-vi-return-of-the-jedi.jpg', 'assets/img/star-wars-episode-i-the-phantom-menace.jpg', 'assets/img/star-wars-episode-ii-attack-of-the-clones.jpg', 'assets/img/star-wars-episode-iii-revenge-of-the-sith.jpg'];
 
   constructor( public data:SwapiDataService ) { }

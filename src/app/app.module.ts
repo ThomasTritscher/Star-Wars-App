@@ -31,6 +31,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { AddPlanetComponent } from './add-planet/add-planet.component';
 import { AddCharacterComponent } from './add-character/add-character.component';
 import { FooterComponent } from './footer/footer.component';
+import { ObservableComponent } from './observable/observable.component';
 
 
 
@@ -49,6 +50,7 @@ import { FooterComponent } from './footer/footer.component';
     AddPlanetComponent,
     AddCharacterComponent,
     FooterComponent,
+    ObservableComponent,
     
   ],
   imports: [
